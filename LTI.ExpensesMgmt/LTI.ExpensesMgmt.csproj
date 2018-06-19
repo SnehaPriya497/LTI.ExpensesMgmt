@@ -44,17 +44,26 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExpensesWebPart\ExpensesWebPart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ExpensesWebPart\ExpensesWebPart.webpart" />
+    <None Include="ExpensesWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{093869e7-5aa0-43c7-aeb7-54878c00c336}</SharePointProjectItemId>
+    </None>
     <None Include="Features\ExpensesList\ExpensesList.feature">
       <FeatureId>{b2a9ef3f-7162-43ee-afdb-819a635da803}</FeatureId>
+    </None>
+    <None Include="Features\ExpensesWebPart\ExpensesWebPart.feature">
+      <FeatureId>{ba9b5bfa-e75f-49b3-8a9c-173a04a2a2bd}</FeatureId>
     </None>
     <None Include="key.snk" />
     <None Include="News\SharePointProjectItem.spdata">
@@ -69,8 +78,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="ExpensesWebPart\Elements.xml" />
     <Content Include="Features\ExpensesList\ExpensesList.Template.xml">
       <DependentUpon>ExpensesList.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\ExpensesWebPart\ExpensesWebPart.Template.xml">
+      <DependentUpon>ExpensesWebPart.feature</DependentUpon>
     </Content>
     <Content Include="News\Elements.xml" />
   </ItemGroup>
